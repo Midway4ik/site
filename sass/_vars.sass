@@ -1,0 +1,39 @@
+$main_color: #e84545
+$dark_color: #30334d
+
+
+=btn($p)
+	padding: $p
+	background-color: $main_color
+	color: #fff
+	border: 1px solid $main_color
+	text-transform: uppercase
+	font-weight: 700
+	position: relative
+	z-index: 1
+	transition: all .7s
+	overflow: hidden
+	&:after
+		content: ''
+		position: absolute
+		bottom: -150px
+		left: -30px
+		width: 120%
+		height: 230%
+		background-color: #fff
+		transition: all .5s
+		z-index: -1
+		transform: rotateZ(20deg)
+	&:hover
+		color: $main_color
+		&:after
+			bottom: -30px
+=soc_btn($color)
+	display: inline-block
+	margin: 0 5px
+	border: 1px solid $color
+	height: 30px
+	line-height: 30px
+	width: 30px
+	text-align: center
+	color: $color
